@@ -1,0 +1,8 @@
+version: '3.8'
+services:
+  app:
+    build: .
+    container_name: test
+    volumes:
+      - .:/app
+    command: ["dotnet", "YourApp.dll"]  # Replace YourApp.dll with your actual app's DLL name

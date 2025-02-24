@@ -22,5 +22,11 @@ public class Student
 
     public DateTime EnrollmentDate { get; set; }
 
-    public ICollection<Enrollment> Enrollments { get; set; }
+    public ICollection<Enrollment> Enrollments { get; set; } = new List<Enrollment>(); // Initialisere med tom liste
+
+    // Constructor
+    public Student()
+    {
+        Enrollments = new List<Enrollment>(); // Sørg for at Enrollments er initialiseret
+    }
 }

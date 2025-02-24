@@ -1,7 +1,4 @@
-using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
-
 public class Course
 {
     [Key]
@@ -13,5 +10,11 @@ public class Course
 
     public int Credits { get; set; }
 
-    public ICollection<Enrollment> Enrollments { get; set; }
+    public ICollection<Enrollment> Enrollments { get; set; } = new List<Enrollment>(); // Initialisere med tom liste
+
+    // Constructor
+    public Course()
+    {
+        Enrollments = new List<Enrollment>(); // Sørg for at Enrollments er initialiseret
+    }
 }

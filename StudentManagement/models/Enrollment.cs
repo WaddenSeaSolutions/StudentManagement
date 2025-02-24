@@ -1,6 +1,5 @@
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-
 public class Enrollment
 {
     [Key]
@@ -17,4 +16,10 @@ public class Enrollment
 
     public Student Student { get; set; }
     public Course Course { get; set; }
+
+    // Constructor
+    public Enrollment()
+    {
+        // Initialize collections or non-nullable properties here
+    }
 }

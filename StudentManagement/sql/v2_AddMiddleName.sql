@@ -1,0 +1,2 @@
+ALTER TABLE Student
+    ADD MiddleName VARCHAR(50) NOT NULL;

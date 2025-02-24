@@ -21,6 +21,8 @@ public class Student
     public string Email { get; set; }
 
     public DateTime EnrollmentDate { get; set; }
+    
+    public DateTime DateOfBirth { get; set; }
 
     public ICollection<Enrollment> Enrollments { get; set; }
 }

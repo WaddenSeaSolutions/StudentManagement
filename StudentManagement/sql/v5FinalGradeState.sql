@@ -1,0 +1,28 @@
+CREATE DATABASE University;
+USE University;
+
+-- Student tabel
+CREATE TABLE Student (
+                         Id INT AUTO_INCREMENT PRIMARY KEY,
+                         FirstName VARCHAR(50) NOT NULL,
+                         LastName VARCHAR(50) NOT NULL,
+                         Email VARCHAR(100) UNIQUE NOT NULL,
+                         EnrollmentDate DATE NOT NULL
+);
+
+-- Course tabel
+CREATE TABLE Course (
+                        Id INT AUTO_INCREMENT PRIMARY KEY,
+                        Title VARCHAR(100) NOT NULL,
+                        Credits INT NOT NULL
+);
+
+-- Enrollment tabel (mellem Student og Course)
+CREATE TABLE Enrollment (
+                            Id INT AUTO_INCREMENT PRIMARY KEY,
+                            StudentId INT,
+                            CourseId INT,
+                            FinalGrade VARCHAR(2),
+                            FOREIGN KEY (StudentId) REFERENCES Student(Id) ON DELETE CASCADE,
+                            FOREIGN KEY (CourseId) REFERENCES Course(Id) ON DELETE CASCADE
+);

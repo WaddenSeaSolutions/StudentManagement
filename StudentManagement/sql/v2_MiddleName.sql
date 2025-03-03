@@ -22,7 +22,7 @@ CREATE TABLE Enrollment (
     Id INT AUTO_INCREMENT PRIMARY KEY,
     StudentId INT,
     CourseId INT,
-    Grade VARCHAR(2), -- Kan være f.eks. 'A', 'B', 'C', 'D', 'F'
+    Grade VARCHAR(2),
     FOREIGN KEY (StudentId) REFERENCES Student(Id) ON DELETE CASCADE,
     FOREIGN KEY (CourseId) REFERENCES Course(Id) ON DELETE CASCADE
 );

@@ -12,6 +12,8 @@ public class Course
 
     public ICollection<Enrollment> Enrollments { get; set; } = new List<Enrollment>(); // Initialisere med tom liste
 
+    public int InstructorId { get; set; }
+    
     // Constructor
     public Course()
     {

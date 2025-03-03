@@ -12,7 +12,7 @@ public class Enrollment
     public int CourseId { get; set; }
 
     [MaxLength(2)] // F.eks. "A", "B", "C", "F"
-    public string Grade { get; set; }
+    public string FinalGrade { get; set; }
 
     public Student Student { get; set; }
     public Course Course { get; set; }

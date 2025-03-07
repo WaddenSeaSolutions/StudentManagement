@@ -8,7 +8,7 @@ public class Course
     [MaxLength(100)]
     public string Title { get; set; }
 
-    public int Credits { get; set; }
+    public double Credits { get; set; }
 
     public ICollection<Enrollment> Enrollments { get; set; } = new List<Enrollment>(); // Initialisere med tom liste
 
